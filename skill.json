@@ -1,0 +1,28 @@
+{
+  "name": "genpark-agentic-commerce-price-drop-retroactive-refund-claimer-skill",
+  "version": "1.0.0",
+  "description": "AI Agentic Commerce Retroactive Price Drop Refund Claimer. Scans past order receipts against retailer price-protection policy windows (Target, Best Buy, Amazon, Nordstrom), verifies eligibility, and synthesizes auto-claim refund filing packets.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "evaluate_price_drop_claims",
+      "description": "Evaluate past customer orders against current live prices to claim retroactive refunds.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "purchase_orders": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Orders with order_id, merchant, product_name, paid_price, days_since_purchase, live_current_price."
+          }
+        },
+        "required": [
+          "purchase_orders"
+        ]
+      }
+    }
+  ]
+}
